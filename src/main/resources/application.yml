@@ -1,0 +1,15 @@
+server:
+  port: 3200
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/chat_db
+    username: root
+    password: root
+    jpa:
+#      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      database-platform: org.hibernate.dialect.MariaDBDialect
+      hibernate:
+            ddl-auto: update
+            show_sql: true
+            use-new-id-generator-mappings: false
